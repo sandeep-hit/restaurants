@@ -8,10 +8,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link href="css/style.css" rel="stylesheet">
+    <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -30,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>   
             </div>         
@@ -79,27 +81,27 @@
                     <form class="form-inline">
                         <div class="container">
                             <div class="form-group row">
-                                 <label for="optradio" class="col-12 col-sm-12 col-md-2 col-form-label">Number of Guests</label>
+                               <label for="optradio" class="col-12 col-sm-12 col-md-2 col-form-label">Number of Guests</label>
                                 <div class="form-check col-12 col-sm-12 col-md-8 justify-content-start">
-                          
-                             <label class="radio-inline">
-                              <input type="radio" name="optradio">1
-                             </label>
-                             <label class="radio-inline">
-                            <input type="radio" name="optradio">2
-                            </label>
-                            <label class="radio-inline">
-                            <input type="radio" name="optradio">3
-                            </label>
-                             <label class="radio-inline">
-                              <input type="radio" name="optradio">4
-                             </label>
-                             <label class="radio-inline">
-                            <input type="radio" name="optradio">5
-                            </label>
-                            <label class="radio-inline">
-                            <input type="radio" name="optradio">6
-                            </label>
+
+                                <label class="radio-inline">
+                                <input type="radio" name="optradio">1
+                                </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optradio">2
+                                </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optradio">3
+                                </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optradio">4
+                                </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optradio">5
+                                </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="optradio">6
+                                </label>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -155,8 +157,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a type="button" class="btn btn-warning btn-sm btn-block" 
-                    data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                    <a type="button" class="btn btn-warning btn-sm btn-block" id="reserveButton">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -214,6 +215,9 @@
                         <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
+                        <button class="btn btn-danger btn-sm" id="carousel-button">
+                            <span id="carousel-button-icon" class="fa fa-pause"></span>
+                        </button>
                     </div>
 
                 </div>
@@ -228,7 +232,7 @@
                     <img class="d-flex mr-3 img-thumbnail align-self-center"
                          src="img/uthappizza.png" alt="Uthappizza">
                     <div class="media-body">
-                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-primary">$4.99</span></h2>
                         <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
                           Italian pizza, topped with Cerignola olives, ripe vine
                           cherry tomatoes, Vidalia onion, Guntur chillies and
@@ -325,10 +329,12 @@
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <!-- Bootsrap beta 4 replaced Tether with Popper -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>	
-
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
